@@ -1,41 +1,55 @@
-# Integrated AI System: Expert System, Search Algorithm & Multi-Agent
+# Integrated AI System
 
-Program ini adalah simulasi sistem AI terpadu untuk deteksi, diagnosis, dan penanganan gangguan jaringan komputer secara interaktif menggunakan antarmuka grafis (HMI) berbasis Matplotlib.
+## Deskripsi
+Program simulasi AI untuk mendeteksi, mendiagnosis, dan menangani gangguan jaringan komputer melalui antarmuka grafis (HMI) berbasis Matplotlib.
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
-1. **Search Algorithm (Pencarian Rute):**
-   * **Rute Tercepat (Shortest Path):** Menggunakan algoritma *Breadth-First Search* (BFS) untuk menemukan jalur komunikasi secepat mungkin.
-   * **Rute Terjauh (Longest Path/Alternatif):** Menggunakan `networkx.shortest_simple_paths` untuk mencari jalur alternatif terpanjang yang tersedia di jaringan.
-
-2. **Expert System (Sistem Pakar):**
-   * Menggunakan metode **Forward Chaining** berbasis aturan (*if-then*) untuk mendiagnosis jenis masalah jaringan secara otomatis berdasarkan fakta yang dikumpulkan oleh agen pemantau.
-
+1. **Search Algorithm:** Menggunakan BFS untuk mencari rute terpendek dan `networkx.shortest_simple_paths` untuk mencari rute alternatif.
+2. **Expert System:** Menggunakan metode *Forward Chaining* berbasis aturan *if-then* untuk mendiagnosis gangguan jaringan.
 3. **Multi-Agent System:**
-   * **`MonitoringAgent`**: Mengumpulkan status kesehatan dan fakta dari jaringan secara real-time.
-   * **`ResponseAgent`**: Menganalisis hasil diagnosis sistem pakar dan mengeksekusi perencanaan ulang rute (*rerouting*) melalui mesin pencari.
+   - `MonitoringAgent`: Memantau kondisi jaringan dan mengumpulkan fakta gangguan.
+   - `ResponseAgent`: Menganalisis diagnosis dan mencari rute alternatif.
+4. **Interactive HMI:** Menampilkan topologi acak Erdős–Rényi dengan 40–100 router, pemilihan START/GOAL, simulasi kerusakan router, dan pencarian ulang rute secara dinamis.
 
-4. **Interactive HMI Dashboard & Dynamic Topology:**
-   * **Topologi Acak Organik (Erdős–Rényi):** Setiap kali tombol *"Acak Topologi Baru"* ditekan, sistem menghasilkan topologi jaringan acak baru secara instan dengan jumlah router bervariasi antara **40 hingga 100 router**.
-   * **Interaksi Klik Langsung:** Pengguna dapat mengeklik node router pada kanvas untuk menentukan titik **START** (biru) dan **GOAL** (hijau).
-   * **Simulasi Kerusakan Jaringan:** Mengeklik router yang sama saat aktif akan mematikan/memblokir node tersebut (`#e31a1c`), memicu agen AI untuk mencari ulang jalur alternatif secara dinamis.
-   * **Kontrol GUI Modern:** Dilengkapi tombol grafis untuk beralih mode rute, mereset pilihan, dan mengacak topologi baru tanpa menggunakan *shortcut* keyboard.
+## Teknologi
+- Python 3
+- NetworkX
+- Matplotlib
 
----
+## Instalasi
 
-## 📦 Prasyarat (Dependencies)
+Instal dependencies dengan perintah:
 
-Pastikan pustaka Python berikut sudah terinstal di lingkungan Anda:
-* Python 3.x
-* `networkx`
-* `matplotlib`
-
-Anda dapat menginstalnya melalui pip jika belum memilikinya:
 ```bash
 pip install networkx matplotlib
+```
 
-## 🛠️ Cara Menjalankan
-Jalankan file `main.py` menggunakan Python 3:
+## Cara Menjalankan
+
+Jalankan program melalui terminal pada direktori proyek:
 
 ```bash
 python main.py
+```
+
+## Panduan Penggunaan
+
+1. Klik **Acak Topologi Baru** untuk membuat jaringan.
+2. Klik node untuk menentukan **START** dan **GOAL**.
+3. Pilih mode pencarian rute.
+4. Klik kembali node aktif untuk menyimulasikan gangguan router.
+5. Amati hasil diagnosis dan perubahan rute pada HMI.
+
+## Keterangan Warna
+
+- 🔵 Biru: START
+- 🟢 Hijau: GOAL
+- 🔴 Merah: Router mengalami gangguan
+
+## Catatan
+`shortest_simple_paths` menghasilkan jalur alternatif berdasarkan urutan dari yang terpendek. Algoritma ini tidak secara langsung mencari jalur terpanjang.
+
+---
+
+**Developed with Python, NetworkX, and Matplotlib.**
