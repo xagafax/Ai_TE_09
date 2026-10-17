@@ -33,3 +33,9 @@ Pastikan pustaka Python berikut sudah terinstal di lingkungan Anda:
 Anda dapat menginstalnya melalui pip jika belum memilikinya:
 ```bash
 pip install networkx matplotlib
+
+## 🛠️ Cara Menjalankan
+Jalankan file `main.py` menggunakan Python 3:
+
+```bash
+python main.py
