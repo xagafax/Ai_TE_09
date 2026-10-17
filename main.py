@@ -157,5 +157,3 @@ if __name__ == "__main__":
         goal_node="Server_Goal"
     )
 
-if __name__ == "__main__":
-    main()
