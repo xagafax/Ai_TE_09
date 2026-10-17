@@ -151,6 +151,11 @@ if __name__ == "__main__":
 
     print("=== SIMULASI SISTEM AI TERPADU ===")
     network_facts = monitor_agent.collect_network_status()
-    diagnosis, path_found = response_agent.process_incident(network_facts, "Router_A", "Server_Goal")
+    response_agent.process_incident(
+        facts=network_facts, 
+        start_node="Router_A", 
+        goal_node="Server_Goal"
+    )
 
-    visualize_network(network_topology, path_found)
+if __name__ == "__main__":
+    main()
