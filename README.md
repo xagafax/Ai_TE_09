@@ -49,6 +49,7 @@ python main.py
 
 ## Catatan
 `shortest_simple_paths` menghasilkan jalur alternatif berdasarkan urutan dari yang terpendek. Algoritma ini tidak secara langsung mencari jalur terpanjang.
+<img width="1626" height="963" alt="image" src="https://github.com/user-attachments/assets/c2419ee0-e6f8-4b51-bddd-57320143867c" />
 
 ---
 
