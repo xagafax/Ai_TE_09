@@ -69,6 +69,13 @@ Pastikan Anda telah menginstal **Python 3** di sistem Anda. Untuk menjalankan si
 Jalankan program utama melalui terminal:
 
 ```bash
+cd Ai_TE_09
+
+```
+
+lalu
+
+```bash
 python main.py
 
 ```
