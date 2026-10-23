@@ -49,8 +49,7 @@ Pastikan Anda telah menginstal **Python 3** di sistem Anda. Untuk menjalankan si
 1. Clone repositori ini ke komputer Anda:
    
 ```bash
-   git clone [https://github.com/xagafax/Ai_TE_09.git](https://github.com/xagafax/Ai_TE_09.git)
-   cd Ai_TE_09
+   git clone https://github.com/xagafax/Ai_TE_09.git
    
 
 ```
