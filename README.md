@@ -22,7 +22,7 @@ Program simulasi AI untuk mendeteksi, mendiagnosis, dan menangani gangguan jarin
 Instal dependencies dengan perintah:
 
 ```bash
-pip install networkx matplotlib
+pip install networkx matplotlibe
 ```
 
 ## Cara Menjalankan
